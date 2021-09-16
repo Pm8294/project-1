@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <body class="body">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+      <div id="id01" class="modal loginbox">
+        <form class="modal-content animate login">
+          <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('id01').style.display='none'">&times;</span> -->
+            <img src="avatar.jpg" class="avatar" />
+          </div>
+          <h1>Login</h1>
+          <p>Username</p>
+          <input type="text" name="" placeholder="Enter Username" />
+          <p>Password</p>
+          <input type="password" name="" placeholder="Enter Password" />
+          <input type="submit" name="" value="Login" />
+          <p class="message">
+            Don't have an account?
+            <a href="#">Register!</a><br />
+            <br />
+          </p>
+          <a href="#">Forgot Password?</a>
+        </form>
+        <form class="modal-content register">
+          <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('id01').style.display='none'">&times;</span> -->
+            <img src="avatar.jpg" class="avatar" />
+          </div>
+          <h1>Register</h1>
+          <p>Username</p>
+          <input type="text" placeholder="Enter Username" />
+          <p>Email</p>
+          <input type="text" placeholder="name@abc" />
+          <p>Phone Number</p>
+          <input type="text" placeholder="Enter Phone Number" />
+          <p>Password</p>
+          <input type="password" placeholder="Enter Password" />
+          <input type="password" placeholder="Confirm" />
+          <input type="submit" name="" value="Register" />
+          <p class="message">
+            Have an account?
+            <a href="#">Login</a><br />
+          </p>
+        </form>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(".message a").click(function () {
+          $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        }
+      }
+
+      </script>
+      </div>
+    </body>
+  </head>
+</html>
